@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.16">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="50dp"
+            app:cardBackgroundColor="#C7E1FF"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp" >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvConduit"
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            android:columnCount="4"
+                            android:rowCount="1">
+
+                            <EditText
+                                android:id="@+id/edtAddTxtType"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:autofillHints=""
+                                android:hint="@string/add_text"
+                                android:inputType="text" />
+
+                            <EditText
+                                android:id="@+id/edtAddTxtSize"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:hint="@string/add_text"
+                                android:inputType="numberDecimal"
+                                android:autofillHints="" />
+
+                            <EditText
+                                android:id="@+id/edtAddTxtAmount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:hint="@string/add_text"
+                                android:inputType="number"
+                                android:autofillHints="" />
+
+                            <Button
+                                android:id="@+id/AddConduitBtn"
+                                android:layout_marginStart="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/add_text_btn" />
+                        </GridLayout>
+
+                    </LinearLayout>
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center_horizontal"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <EditText-->
+<!--                            android:id="@+id/edtAddTxtSize"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="50dp"-->
+<!--                            android:hint="@string/add_text"-->
+<!--                            android:inputType="number"-->
+<!--                            android:autofillHints="" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center_horizontal"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <EditText-->
+<!--                            android:id="@+id/edtAddTxtAmount"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="50dp"-->
+<!--                            android:hint="@string/add_text"-->
+<!--                            android:inputType="number"-->
+<!--                            android:autofillHints="" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center_horizontal"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <Button-->
+<!--                            android:id="@+id/AddConduitBtn"-->
+<!--                            android:layout_marginStart="10dp"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="@string/add_text_btn" />-->
+<!--                    </LinearLayout>-->
+                </LinearLayout>
+
+            </ScrollView>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
